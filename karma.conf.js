@@ -12,8 +12,8 @@ module.exports = function(config) {
     exclude: [
     ],
     preprocessors: {
-      'src/*.js': ['webpack', 'sourcemap'],
-      'spec/*spec.js': ['webpack', 'sourcemap']
+      'src/*.js': ['webpack', 'sourcemap', 'coverage'],
+      'spec/*spec.js': ['webpack', 'sourcemap', 'coverage']
     },
     plugins: [
       'karma-jquery',
@@ -21,9 +21,10 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-chrome-launcher',
       'karma-jasmine-html-reporter',
-      'karma-sourcemap-loader'
+      'karma-sourcemap-loader',
+      'karma-coverage'
     ],
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'coverage'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

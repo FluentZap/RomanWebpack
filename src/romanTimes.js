@@ -3,12 +3,12 @@ var numeralsLookupList = ["I", "IV", "V", "IX", "X", "XL", "L", "LC", "C", "CD",
 
 export function convertToRoman(number) {
   var numeral = '';
-  for (let i = numbersLookupList.length - 1; i >= 0; i--) {
-    while (number >= numbersLookupList[i]) {
-      number -= numbersLookupList[i];
-      numeral += numeralsLookupList[i];
-    }
-  }
+  // for (let i = numbersLookupList.length - 1; i >= 0; i--) {
+  //   while (number >= numbersLookupList[i]) {
+  //     number -= numbersLookupList[i];
+  //     numeral += numeralsLookupList[i];
+  //   }
+  // }  
   return numeral;
 }
 
