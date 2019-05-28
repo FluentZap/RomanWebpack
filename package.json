@@ -5,10 +5,22 @@
   "main": "index.js",
   "scripts": {
     "test": "karma start karma.conf.js",
+    "testCoverage": "nyc npm run build",
     "build": "webpack --mode development",
     "start": "npm run build; webpack-dev-server --open --mode development",
     "watch": "webpack --watch",
     "lint": "eslint src/*.js"
+  },
+  "nyc": {
+    "exclude": [
+      "node_modules",
+      "spec",
+      "dist",
+      "**/*conf.js",
+      "**/*config.js",
+      "coverage"
+    ],
+    "all": true
   },
   "repository": {
     "type": "git"
@@ -34,6 +46,7 @@
     "karma-jquery": "^0.2.2",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.13",
+    "nyc": "^14.1.1",
     "style-loader": "^0.20.2",
     "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "4.19.1",
