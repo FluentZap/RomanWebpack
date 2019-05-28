@@ -4,7 +4,8 @@
   "description": "A game about nothing",
   "main": "index.js",
   "scripts": {
-    "test": "karma start karma.conf.js",    
+    "test": "karma start karma.conf.js",
+    "testCoverage": "nyc npm run test",
     "build": "webpack --mode development",
     "start": "npm run build; webpack-dev-server --open --mode development",
     "watch": "webpack --watch",
@@ -18,10 +19,7 @@
       "**/*conf.js",
       "**/*config.js",
       "coverage"
-    ],
-    "reporter": [
-      "html"
-    ],
+    ],    
     "all": true
   },
   "repository": {
